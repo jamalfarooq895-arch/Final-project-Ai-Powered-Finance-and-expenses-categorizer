@@ -36,9 +36,14 @@ Exception handling was applied comprehensively:
 (Simulated for Individual Project)
 A peer review was conducted via a GitHub Pull Request before merging the `AI-Integration` branch into the `main` branch. The reviewer suggested moving the `TfidfVectorizer` pipeline inside the class `__init__` rather than initializing it globally, which improved memory management.
 
-## 11. Team Roles & Contribution
+## 11. Team Roles & Contribution + Learning Outcomes
 Since this was an individual project, I utilized the "Multiple Hats" approach:
 - **Systems Analyst**: Gathered requirements and designed the MVC architecture.
 - **AI & Backend Developer**: Implemented the SQLite database and Scikit-Learn NLP model.
 - **Frontend Developer**: Created the dark-mode responsive UI using CustomTkinter.
 - **QA Tester**: Wrote and executed all Pytest scripts.
+
+### Learning Outcomes
+- **Software Construction Principles:** Gained practical experience in transitioning from procedural legacy scripts to a structured MVC architecture.
+- **Version Control & SPI:** Learned the importance of iterative development using Git, and how Automated Testing acts as a massive Software Process Improvement by preventing regression bugs.
+- **AI Integration:** Acquired knowledge of applying Natural Language Processing (NLP) models into standard desktop software to create an intelligent user experience.

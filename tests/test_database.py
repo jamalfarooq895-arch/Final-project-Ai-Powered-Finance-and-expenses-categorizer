@@ -9,12 +9,18 @@ TEST_DB_PATH = "test_finance_app.db"
 def db():
     # Setup
     if os.path.exists(TEST_DB_PATH):
-        os.remove(TEST_DB_PATH)
+        try:
+            os.remove(TEST_DB_PATH)
+        except PermissionError:
+            pass
     database = DatabaseManager(TEST_DB_PATH)
     yield database
     # Teardown
     if os.path.exists(TEST_DB_PATH):
-        os.remove(TEST_DB_PATH)
+        try:
+            os.remove(TEST_DB_PATH)
+        except PermissionError:
+            pass
 
 def test_add_transaction(db):
     user_id = db.register_user("testuser", "password123")
